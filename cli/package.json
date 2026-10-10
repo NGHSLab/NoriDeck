@@ -1,0 +1,47 @@
+{
+  "name": "@nghslab/nori-cli",
+  "version": "0.2.1",
+  "description": "nori CLI — NoriDeck 카트리지 프로젝트를 만들고(init) .nori 파일로 빌드·검사·해제한다.",
+  "keywords": [
+    "norideck",
+    "nori",
+    "cartridge",
+    "cli",
+    "game"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/NGHSLab/NoriDeck#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NGHSLab/NoriDeck.git",
+    "directory": "cli"
+  },
+  "type": "module",
+  "bin": {
+    "nori": "./dist/nori.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "prepare": "node scripts/build.mjs",
+    "prepublishOnly": "node scripts/build.mjs",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@nghslab/nori-sdk": "^0.2.0",
+    "fflate": "^0.8.2",
+    "vite": "^7.3.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

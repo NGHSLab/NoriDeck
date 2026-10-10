@@ -1,0 +1,48 @@
+# electron-builder 설정. 실행: npm run build:desktop (저장소 루트)
+# appId / productName 은 코드네임 기준이며 공개 배포 시 오리지널 이름으로 교체한다.
+appId: com.norideck.console
+productName: NoriDeck
+copyright: Copyright © 2026 NoriDeck Developers
+
+directories:
+  # 버전마다 폴더 하나 (release/0.1.3/...). 지난 버전 폴더 정리는 수동
+  output: release/${version}
+  buildResources: build
+
+# 앱 번들에 들어가는 파일. 렌더러(클라이언트 빌드)는 renderer/ 로 복사된다.
+files:
+  - dist/**
+  - splash/**
+  - package.json
+  - from: ../runtime/dist
+    to: renderer
+
+# asar 바깥에 두는 파일. 창 아이콘은 nativeImage 가 asar 안을 못 읽으므로 resources/ 에 그대로 둔다
+extraResources:
+  - from: build/icon.png
+    to: icon.png
+
+asar: true
+npmRebuild: false
+
+win:
+  icon: build/icon.ico
+  target:
+    - nsis
+    - portable
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+mac:
+  icon: build/icon.png
+  target:
+    - dmg
+  category: public.app-category.games
+linux:
+  icon: build/icon.png
+  # 확장자 없는 단일 실행 파일 + 런타임 파일 한 폴더 (release/<버전>/linux-unpacked/norideck).
+  # AppImage·deb 는 배포 방식을 정할 때 다시 본다
+  target:
+    - dir
+  executableName: norideck
+  category: Game

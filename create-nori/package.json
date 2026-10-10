@@ -1,0 +1,36 @@
+{
+  "name": "create-nori",
+  "version": "0.1.0",
+  "description": "npm create nori — NoriDeck 카트리지 프로젝트 뼈대를 만든다 (nori init 과 같다).",
+  "keywords": [
+    "norideck",
+    "nori",
+    "cartridge",
+    "create",
+    "scaffold"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/NGHSLab/NoriDeck#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NGHSLab/NoriDeck.git",
+    "directory": "create-nori"
+  },
+  "type": "module",
+  "bin": {
+    "create-nori": "./bin.mjs"
+  },
+  "files": [
+    "bin.mjs",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "dependencies": {
+    "@nghslab/nori-cli": "^0.2.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

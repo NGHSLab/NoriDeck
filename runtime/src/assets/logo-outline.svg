@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="52 132 408 262" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" role="img" aria-label="NoriDeck">
+  <!-- 콘솔 두께면 (아래쪽) -->
+  <path d="M66 314 V332 A52 52 0 0 0 118 384 H394 A52 52 0 0 0 446 332 V314"/>
+  <!-- 윗면 -->
+  <rect x="66" y="146" width="380" height="220" rx="52"/>
+  <!-- 베젤 · 화면 -->
+  <rect x="164" y="170" width="184" height="172" rx="20"/>
+  <rect x="176" y="182" width="160" height="148" rx="14"/>
+  <!-- 불꽃 -->
+  <path transform="translate(211,196) scale(0.75)" stroke-width="6.5" d="M60,0 C72,28 104,48 104,96 C104,134 84,160 60,160 C36,160 16,134 16,96 C16,74 30,62 36,44 C40,60 52,64 54,50 C56,32 50,16 60,0 Z"/>
+  <path transform="translate(211,196) scale(0.75)" stroke-width="6.5" d="M60,70 C70,90 84,100 84,122 C84,142 72,156 60,156 C48,156 36,142 36,122 C36,108 44,100 48,90 C50,98 56,100 57,92 C58,84 56,78 60,70 Z"/>
+  <!-- 십자키 -->
+  <path d="M116 218 h20 v20 h20 v20 h-20 v20 h-20 v-20 h-20 v-20 h20 z"/>
+  <!-- 버튼 -->
+  <circle cx="378" cy="240" r="13"/>
+  <circle cx="410" cy="266" r="13"/>
+  <!-- 스피커 -->
+  <g stroke-width="4">
+    <circle cx="384" cy="316" r="3"/><circle cx="400" cy="316" r="3"/><circle cx="416" cy="316" r="3"/>
+    <circle cx="392" cy="330" r="3"/><circle cx="408" cy="330" r="3"/>
+  </g>
+</svg>

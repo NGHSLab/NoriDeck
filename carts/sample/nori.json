@@ -1,0 +1,17 @@
+{
+  "id": "sample",
+  "title": "NoriDeck Sample",
+  "version": "0.1.0",
+  "author": "NoriDeck",
+  "description": "콘솔 개발·검증용 샘플 카트리지. 엔진 없이 canvas 만 쓴다 (한 화면 480×270).",
+  "screen": {
+    "width": 480,
+    "height": 270,
+    "layout": "single"
+  },
+  "saveSlots": ["main"],
+  "build": {
+    "entry": "src/cart.ts",
+    "assets": "assets"
+  }
+}

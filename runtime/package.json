@@ -1,0 +1,24 @@
+{
+  "name": "@norideck/runtime",
+  "private": true,
+  "version": "0.1.3",
+  "description": "콘솔 펌웨어. 화면 비율·키 배치·세이브·배속·카트리지 로드를 담당한다. 특정 게임을 모른다.",
+  "type": "module",
+  "exports": {
+    ".": "./src/boot.ts",
+    "./vite": "./vite-plugin.ts"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@nghslab/nori-sdk": "*",
+    "fflate": "^0.8.2"
+  },
+  "devDependencies": {
+    "vite": "^7.3.0"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "name": "@nghslab/nori-sdk",
+  "version": "0.2.1",
+  "description": "NoriDeck 콘솔 ↔ 카트리지 계약. 카트리지(게임)는 이 패키지의 타입과 어댑터만 알고 콘솔 내부는 모른다.",
+  "keywords": [
+    "norideck",
+    "nori",
+    "cartridge",
+    "game",
+    "console",
+    "sdk"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/NGHSLab/NoriDeck#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NGHSLab/NoriDeck.git",
+    "directory": "sdk"
+  },
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./phaser": {
+      "types": "./dist/phaser.d.ts",
+      "default": "./dist/phaser.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "peerDependencies": {
+    "phaser": "^3.90.0"
+  },
+  "peerDependenciesMeta": {
+    "phaser": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "phaser": "^3.90.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

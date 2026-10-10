@@ -1,0 +1,21 @@
+{
+  "name": "@norideck/desktop",
+  "private": true,
+  "version": "0.1.3",
+  "description": "Electron 데스크톱 껍데기. 클라이언트 빌드를 감싸고 파일 세이브 등 OS 기능만 제공한다.",
+  "productName": "NoriDeck",
+  "author": "NoriDeck Developers",
+  "main": "dist/main.js",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "compile": "tsc -p tsconfig.json",
+    "start": "npm run compile && electron .",
+    "package": "npm run compile && electron-builder --config electron-builder.yml",
+    "install:linux": "node scripts/install-linux.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "devDependencies": {
+    "electron": "44.2.0",
+    "electron-builder": "^26.15.0"
+  }
+}

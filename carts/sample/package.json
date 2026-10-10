@@ -1,0 +1,16 @@
+{
+  "name": "@norideck/cart-sample",
+  "private": true,
+  "version": "0.0.1",
+  "description": "콘솔 개발·검증용 샘플 카트리지. 엔진 없이 canvas 만 써서 SDK 계약이 '아무 TS 게임'에 충분한지 확인한다.",
+  "type": "module",
+  "exports": {
+    ".": "./src/cart.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@nghslab/nori-sdk": "*"
+  }
+}
